@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "1db3c2a9-c648-4f88-b25f-45d6aacf1884",
+		"name": "SA&D",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18445792"
+	},
+	"item": [
+		{
+			"name": "User Service",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/userregistration/?First Name=Duc&Last Name=Bui&Email Id=duc.bui@starack.net&Mobile Number=2420340234&Password=1&Confirm Password=1&Address=Thai Binh",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/userregistration/?First Name=Duc&Last Name=Bui&Email Id=duc.bui@starack.net&Mobile Number=2420340234&Password=1&Confirm Password=1&Address=Thai Binh",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"userregistration",
+								""
+							],
+							"query": [
+								{
+									"key": "First Name",
+									"value": "Duc"
+								},
+								{
+									"key": "Last Name",
+									"value": "Bui"
+								},
+								{
+									"key": "Email Id",
+									"value": "duc.bui@starack.net"
+								},
+								{
+									"key": "Mobile Number",
+									"value": "2420340234"
+								},
+								{
+									"key": "Password",
+									"value": "1"
+								},
+								{
+									"key": "Confirm Password",
+									"value": "1"
+								},
+								{
+									"key": "Address",
+									"value": "Thai Binh"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/userinfo/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"User Name\":\"duc.bui@starack.net\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/userinfo/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"userinfo",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/userlogin/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "User Name",
+									"value": "duc.bui@starack.net",
+									"type": "text"
+								},
+								{
+									"key": "Password",
+									"value": "hello123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/userlogin/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"userlogin",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment Service",
+			"item": [
+				{
+					"name": "Initiate payment",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Payment status",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"User Name\":\"duc.bui@starack.net\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4001/payment_status/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4001",
+							"path": [
+								"payment_status",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product Service",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
